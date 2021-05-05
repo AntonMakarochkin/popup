@@ -12,3 +12,6 @@ close1.onclick = ()=>{
     btn.click();
 }
 
+{
+    
+}

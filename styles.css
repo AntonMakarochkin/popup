@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: blueviolet;
+}
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.4);
+    background: brown;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    opacity: 0;
+    top: -150%;
+    pointer-events: none;
+    transition: top 0s 0.2s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0s 0.2s ease-in-out;
+}              
+.popup.show{
+    top: 50%;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1.4);
+    transition: top 0s 0s ease-in-out,
+                opacity 0.2s 0s ease-in-out,
+                transform 0s 0.2s ease-in-out;
+
+}
+.popup :is(header, .icons, .field){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popup header{
+    padding-bottom: 10px;
+}
+header span{
+    font-size: 21px;
+}
+
+header .close, .icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+header .close{
+    font-size: 21px;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.popup .content{
+    margin: 20px 0;
+}
+.content .icons{
+    margin: 15px 0 20px 0;
+ 
+}
+.icons a{
+    border: 1px solid transparent;
+    width: 50px;
+    font-size: 25px;
+    height: 50px;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.icons a:nth-child(1){
+  color: red;
+  border-color: salmon;
+}
+.icons a:nth-child(1):hover{
+    background: rgb(129, 17, 5);
+}
+.icons a:nth-child(2){
+    color: rgb(86, 201, 10);
+    border-color: rgb(51, 160, 0);
+}
+.icons a:nth-child(2):hover{
+    background: rgb(51, 160, 0);
+
+}
+.icons a:nth-child(3){
+    color: rgb(68, 0, 255);
+    border-color: rgb(115, 91, 255);
+}
+.icons a:nth-child(3):hover{
+    background: rgb(115, 91, 255);
+
+}
+.icons a:nth-child(4){
+    color: rgb(255, 252, 49);
+    border-color: rgb(250, 202, 114);
+}
+.icons a:nth-child(4):hover{
+    background: rgb(250, 202, 114);
+
+}
+.icons a:nth-child(5){
+    color: rgb(255, 113, 208);
+    border-color: rgb(216, 28, 138);
+}
+.icons a:nth-child(5):hover{
+    background: rgb(216, 28, 138);
+
+}
+.icons a:hover{
+    color: seashell;
+    border-color: transparent;
+}
+
+.icons a i {
+transition: transform 0.3 ease-in-out;
+}
+
+.icons a:hover i{
+    transform: scale(1.2);
+}
+
+.content .field{
+    margin: 12px 0 -5px 0;
+    height: 40px;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+
+.field i{
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+.field input{ 
+    border:none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+
+}
+
+.field button{ 
+   padding: 5px 18px;
+   border: 2px solid transparent;
+   color: teal;
+   border-radius: 4px;
+   cursor: pointer;
+
+}
